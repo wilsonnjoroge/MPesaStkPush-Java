@@ -1,2 +1,29 @@
-package com.MPesaStkPush.MPesaStkPush.entity;public class MpesaTransaction {
+package com.MPesaStkPush.MPesaStkPush.entity;
+
+import jakarta.persistence.*;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.time.LocalDateTime;
+
+@Data
+@Getter
+@Setter
+@Entity
+public class MpesaTransaction {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    private String phoneNumber;
+    private Double amount;
+    private String accountReference;
+    private String transactionDesc;
+    private String merchantRequestId;
+    private String checkoutRequestId;
+    private LocalDateTime timestamp;
+    private String resultCode;
+    private String resultDesc;
+
 }
+
