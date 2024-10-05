@@ -11,6 +11,7 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @Entity
+@Table(name = "mpesa_transactions")
 public class MpesaTransaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
