@@ -14,7 +14,7 @@ import java.time.LocalDateTime;
 @Table(name = "mpesa_transactions")
 public class MpesaTransaction {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String phoneNumber;
     private Double amount;
